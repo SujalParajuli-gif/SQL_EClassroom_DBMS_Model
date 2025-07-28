@@ -1,0 +1,25 @@
+
+drop table Assessment_Module_Student;
+
+drop table Assessment;
+
+drop table Student_Module_Resource;
+
+drop table Resources;
+
+drop table Student Teacher_Announcement;
+
+drop table Announcement;
+
+drop table Student_Module_Teacher;
+
+drop table Teacher;
+
+drop table Module_Student;
+
+drop table Module;
+
+drop table Student;
+
+drop table Program;
+

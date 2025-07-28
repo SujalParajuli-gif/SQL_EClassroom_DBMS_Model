@@ -1,0 +1,261 @@
+
+Insertion:
+
+
+
+INSERT ALL
+INTO Program (Program_ID, Program_Name, P_Duration, P_Description)
+VALUES (101, 'BSC Hons Computing', 3, 'Bachelor of Science Honours in Computing')
+INTO Program (Program_ID, Program_Name, P_Duration, P_Description)
+VALUES (102, 'BSC Hons Networking', 3, 'Bachelor of Science Honours in Networking')
+INTO Program (Program_ID, Program_Name, P_Duration, P_Description)
+VALUES (103, 'BSC Hons AI', 3, 'Bachelor of Science Honours in Artificial Intelligence')
+INTO Program (Program_ID, Program_Name, P_Duration, P_Description)
+VALUES (104, 'BSC Hons Multimedia', 3, 'Bachelor of Science Honours in Multimedia')
+INTO Program (Program_ID, Program_Name, P_Duration, P_Description)
+VALUES (105, 'BSC Hons Data Science', 3, 'Bachelor of Science Honours in Data Science')
+INTO Program (Program_ID, Program_Name, P_Duration, P_Description)
+VALUES (106, 'BSC Hons Cybersecurity', 3, 'Bachelor of Science Honours in Cybersecurity')
+INTO Program (Program_ID, Program_Name, P_Duration, P_Description)
+VALUES (107, 'BSC Hons Software Engineering', 3, 'Bachelor of Science Honours in Software Engineering')
+SELECT * FROM DUAL;
+
+
+
+
+
+
+INSERT ALL
+INTO Student (Student_ID, Student_Name, DOB, Enrollment_Date, Std_Email, Program_ID)
+VALUES (201, 'Aarav Sharma', TO_DATE('2004-01-15', 'YYYY-MM-DD'), TO_DATE('2023-08-01', 'YYYY-MM-DD'), 'aarav.sharma@gmail.com', 101)
+INTO Student (Student_ID, Student_Name, DOB, Enrollment_Date, Std_Email, Program_ID)
+VALUES (202, 'Prisha Poudel', TO_DATE('2004-02-16', 'YYYY-MM-DD'), TO_DATE('2023-08-02', 'YYYY-MM-DD'), 'prisha.poudel@gmail.com', 101)
+INTO Student (Student_ID, Student_Name, DOB, Enrollment_Date, Std_Email, Program_ID)
+VALUES (203, 'Arjun Adhikari', TO_DATE('2004-03-17', 'YYYY-MM-DD'), TO_DATE('2023-08-03', 'YYYY-MM-DD'), 'arjun.adhikari@gmail.com', 102)
+INTO Student (Student_ID, Student_Name, DOB, Enrollment_Date, Std_Email, Program_ID)
+VALUES (204, 'Siddhartha Bhattarai', TO_DATE('2004-04-18', 'YYYY-MM-DD'), TO_DATE('2023-08-04', 'YYYY-MM-DD'), 'siddhartha.b@gmail.com', 102)
+INTO Student (Student_ID, Student_Name, DOB, Enrollment_Date, Std_Email, Program_ID)
+VALUES (205, 'Aanya Thapa', TO_DATE('2004-05-19', 'YYYY-MM-DD'), TO_DATE('2023-08-01', 'YYYY-MM-DD'), 'aanya.thapa@gmail.com', 103)
+INTO Student (Student_ID, Student_Name, DOB, Enrollment_Date, Std_Email, Program_ID)
+VALUES (206, 'Rohan KC', TO_DATE('2004-06-20', 'YYYY-MM-DD'), TO_DATE('2023-08-04', 'YYYY-MM-DD'), 'rohan.kc@gmail.com', 103)
+INTO Student (Student_ID, Student_Name, DOB, Enrollment_Date, Std_Email, Program_ID)
+VALUES (207, 'Krisha Gurung', TO_DATE('2004-07-21', 'YYYY-MM-DD'), TO_DATE('2023-08-05', 'YYYY-MM-DD'), 'krisha.gurung@gmail.com', 104)
+SELECT * FROM DUAL;
+
+
+
+
+
+
+INSERT ALL
+INTO Module (Module_ID, Module_Name, M_Duration, M_Credits, M_Description)
+VALUES (301, 'Database Systems', 6, 12, 'Advanced Database Management Systems')
+INTO Module (Module_ID, Module_Name, M_Duration, M_Credits, M_Description)
+VALUES (302, 'Data Structures', 6, 12, 'Advanced Data Structures and Algorithms')
+INTO Module (Module_ID, Module_Name, M_Duration, M_Credits, M_Description)
+VALUES (303, 'Software Engineering', 6, 12, 'Software Development Life Cycle')
+INTO Module (Module_ID, Module_Name, M_Duration, M_Credits, M_Description)
+VALUES (304, 'Cloud Computing', 6, 12, 'Cloud Infrastructure and Services')
+INTO Module (Module_ID, Module_Name, M_Duration, M_Credits, M_Description)
+VALUES (305, 'Deep Learning', 6, 12, 'Neural Networks and Deep Learning')
+INTO Module (Module_ID, Module_Name, M_Duration, M_Credits, M_Description)
+VALUES (306, 'Web Development', 6, 12, 'Full Stack Web Development')
+INTO Module (Module_ID, Module_Name, M_Duration, M_Credits, M_Description)
+VALUES (307, 'Network Security', 6, 12, 'Network Security and Cryptography')
+SELECT * FROM DUAL;
+
+
+
+
+
+INSERT ALL
+INTO Module_Student (Student_ID, Module_ID)
+VALUES (201, 301)
+INTO Module_Student (Student_ID, Module_ID)
+VALUES (201, 302)
+INTO Module_Student (Student_ID, Module_ID)
+VALUES (202, 301)
+INTO Module_Student (Student_ID, Module_ID)
+VALUES (203, 303)
+INTO Module_Student (Student_ID, Module_ID)
+VALUES (204, 304)
+INTO Module_Student (Student_ID, Module_ID)
+VALUES (205, 305)
+INTO Module_Student (Student_ID, Module_ID)
+VALUES (206, 305)
+SELECT * FROM DUAL;
+
+
+
+
+
+INSERT ALL
+INTO Teacher (Teacher_ID, Teacher_Name, Teach_Specialization, Teach_Email)
+VALUES (401, 'Dr. Ramesh Prasad', 'Database Systems', 'ramesh.p@college.edu')
+INTO Teacher (Teacher_ID, Teacher_Name, Teach_Specialization, Teach_Email)
+VALUES (402, 'Prof. Sita Devi', 'Software Engineering', 'sita.d@college.edu')
+INTO Teacher (Teacher_ID, Teacher_Name, Teach_Specialization, Teach_Email)
+VALUES (403, 'Dr. Hari Kumar', 'Artificial Intelligence', 'hari.k@college.edu')
+INTO Teacher (Teacher_ID, Teacher_Name, Teach_Specialization, Teach_Email)
+VALUES (404, 'Dr. Maya Singh', 'Web Technologies', 'maya.s@college.edu')
+INTO Teacher (Teacher_ID, Teacher_Name, Teach_Specialization, Teach_Email)
+VALUES (405, 'Prof. Raj Sharma', 'Network Security', 'raj.s@college.edu')
+INTO Teacher (Teacher_ID, Teacher_Name, Teach_Specialization, Teach_Email)
+VALUES (406, 'Dr. Anita Pant', 'Cloud Computing', 'anita.p@college.edu')
+INTO Teacher (Teacher_ID, Teacher_Name, Teach_Specialization, Teach_Email)
+VALUES (407, 'Prof. Binod Thapa', 'Data Structures', 'binod.t@college.edu')
+SELECT * FROM DUAL;
+
+
+
+
+
+
+INSERT ALL
+INTO Student_Module_Teacher (Teacher_ID, Module_ID, Student_ID)
+VALUES (401, 301, 201)
+INTO Student_Module_Teacher (Teacher_ID, Module_ID, Student_ID)
+VALUES (401, 301, 202)
+INTO Student_Module_Teacher (Teacher_ID, Module_ID, Student_ID)
+VALUES (402, 303, 203)
+INTO Student_Module_Teacher (Teacher_ID, Module_ID, Student_ID)
+VALUES (403, 305, 205)
+INTO Student_Module_Teacher (Teacher_ID, Module_ID, Student_ID)
+VALUES (403, 305, 206)
+INTO Student_Module_Teacher (Teacher_ID, Module_ID, Student_ID)
+VALUES (404, 306, 207)
+INTO Student_Module_Teacher (Teacher_ID, Module_ID, Student_ID)
+VALUES (405, 307, 204)
+SELECT * FROM DUAL;
+
+
+
+
+INSERT ALL
+INTO Announcement (Announcement_ID, Ann_Title, Date_Posted, Ann_Content)
+VALUES (601, 'DB Mid-Term Update', TO_DATE('2024-05-02', 'YYYY-MM-DD'), 'Mid-term exam postponed to May 20th')
+INTO Announcement (Announcement_ID, Ann_Title, Date_Posted, Ann_Content)
+VALUES (602, 'Project Guidelines', TO_DATE('2024-05-10', 'YYYY-MM-DD'), 'Updated project guidelines posted')
+INTO Announcement (Announcement_ID, Ann_Title, Date_Posted, Ann_Content)
+VALUES (603, 'Deep Learning Wksp', TO_DATE('2024-05-15', 'YYYY-MM-DD'), 'Additional workshop scheduled')
+INTO Announcement (Announcement_ID, Ann_Title, Date_Posted, Ann_Content)
+VALUES (604, 'Network Sec Seminar', TO_DATE('2024-05-20', 'YYYY-MM-DD'), 'Industry expert session')
+INTO Announcement (Announcement_ID, Ann_Title, Date_Posted, Ann_Content)
+VALUES (605, 'Web Dev Hackathon', TO_DATE('2024-05-25', 'YYYY-MM-DD'), '24-hour coding challenge')
+INTO Announcement (Announcement_ID, Ann_Title, Date_Posted, Ann_Content)
+VALUES (606, 'Cloud Comp Workshop', TO_DATE('2024-05-30', 'YYYY-MM-DD'), 'AWS certification prep')
+INTO Announcement (Announcement_ID, Ann_Title, Date_Posted, Ann_Content)
+VALUES (607, 'Data Struct Tutorial', TO_DATE('2024-06-05', 'YYYY-MM-DD'), 'Extra help session')
+SELECT * FROM DUAL;
+
+
+
+
+INSERT ALL
+INTO Student_Teacher_Announcement (Announcement_ID, Module_ID, Student_ID, Teacher_ID)
+VALUES (601, 301, 201, 401)
+INTO Student_Teacher_Announcement (Announcement_ID, Module_ID, Student_ID, Teacher_ID)
+VALUES (601, 301, 202, 401)
+INTO Student_Teacher_Announcement (Announcement_ID, Module_ID, Student_ID, Teacher_ID)
+VALUES (602, 303, 203, 402)
+INTO Student_Teacher_Announcement (Announcement_ID, Module_ID, Student_ID, Teacher_ID)
+VALUES (603, 305, 205, 403)
+INTO Student_Teacher_Announcement (Announcement_ID, Module_ID, Student_ID, Teacher_ID)
+VALUES (603, 305, 206, 403)
+INTO Student_Teacher_Announcement (Announcement_ID, Module_ID, Student_ID, Teacher_ID)
+VALUES (604, 307, 204, 405)
+INTO Student_Teacher_Announcement (Announcement_ID, Module_ID, Student_ID, Teacher_ID)
+VALUES (605, 306, 207, 404)
+SELECT * FROM DUAL;
+
+
+
+INSERT ALL
+INTO Resources (Resource_ID, R_Duration, R_Title, R_Type)
+VALUES (701, 60, 'DB Fundamentals', 'PDF')
+INTO Resources (Resource_ID, R_Duration, R_Title, R_Type)
+VALUES (702, 45, 'Advanced SQL', 'PDF')
+INTO Resources (Resource_ID, R_Duration, R_Title, R_Type)
+VALUES (703, 90, 'Database Design', 'VIDEO')
+INTO Resources (Resource_ID, R_Duration, R_Title, R_Type)
+VALUES (704, 60, 'Deep Learning', 'PDF')
+INTO Resources (Resource_ID, R_Duration, R_Title, R_Type)
+VALUES (705, 120, 'Network Security', 'VIDEO')
+INTO Resources (Resource_ID, R_Duration, R_Title, R_Type)
+VALUES (706, 45, 'Web Dev Basics', 'PDF')
+INTO Resources (Resource_ID, R_Duration, R_Title, R_Type)
+VALUES (707, 90, 'Cloud Computing', 'VIDEO')
+SELECT * FROM DUAL;
+
+
+
+INSERT ALL
+INTO Student_Module_Resource (Resource_ID, Module_ID, Student_ID)
+VALUES (701, 301, 201)
+INTO Student_Module_Resource (Resource_ID, Module_ID, Student_ID)
+VALUES (702, 301, 201)
+INTO Student_Module_Resource (Resource_ID, Module_ID, Student_ID)
+VALUES (701, 301, 202)
+INTO Student_Module_Resource (Resource_ID, Module_ID, Student_ID)
+VALUES (704, 305, 205)
+INTO Student_Module_Resource (Resource_ID, Module_ID, Student_ID)
+VALUES (704, 305, 206)
+INTO Student_Module_Resource (Resource_ID, Module_ID, Student_ID)
+VALUES (705, 307, 204)
+INTO Student_Module_Resource (Resource_ID, Module_ID, Student_ID)
+VALUES (706, 306, 207)
+SELECT * FROM DUAL;
+
+
+
+
+
+
+
+
+
+
+
+INSERT ALL
+INTO Assessment (Assessment_ID, Asse_Description, Asse_Weightage, Asse_Deadline) 
+VALUES (10, 'Programming Assignment', '40', TO_DATE('2024-05-10', 'YYYY-MM-DD'))
+INTO Assessment (Assessment_ID, Asse_Description, Asse_Weightage, Asse_Deadline) 
+VALUES (11, 'Database Project', '40', TO_DATE('2024-06-01', 'YYYY-MM-DD'))
+INTO Assessment (Assessment_ID, Asse_Description, Asse_Weightage, Asse_Deadline) 
+VALUES (12, 'Professional Ethics Exam', '50', TO_DATE('2024-05-15', 'YYYY-MM-DD'))
+INTO Assessment (Assessment_ID, Asse_Description, Asse_Weightage, Asse_Deadline) 
+VALUES (13, 'Networking Lab', '70', TO_DATE('2024-06-05', 'YYYY-MM-DD'))
+INTO Assessment (Assessment_ID, Asse_Description, Asse_Weightage, Asse_Deadline) 
+VALUES (14, 'Multimedia Presentation', '30', TO_DATE('2024-05-25', 'YYYY-MM-DD'))
+INTO Assessment (Assessment_ID, Asse_Description, Asse_Weightage, Asse_Deadline) 
+VALUES (15, 'Cloud Computing Assignment', '80', TO_DATE('2024-06-10', 'YYYY-MM-DD'))
+INTO Assessment (Assessment_ID, Asse_Description, Asse_Weightage, Asse_Deadline) 
+VALUES (16, 'Final Exam for Computing', '100', TO_DATE('2024-06-15', 'YYYY-MM-DD'))
+SELECT * FROM dual;
+
+
+
+
+
+
+
+
+
+INSERT ALL
+INTO Assessment_Module_Student (Assessment_ID, Module_ID, Student_ID, Asse_Status, Marks_Obtained, Grade_Obtained)
+VALUES (10, 301, 201, 'Submitted', 85, 'A')
+INTO Assessment_Module_Student (Assessment_ID, Module_ID, Student_ID, Asse_Status, Marks_Obtained, Grade_Obtained)
+VALUES (10, 301, 202, 'Submitted', 78, 'B')
+INTO Assessment_Module_Student (Assessment_ID, Module_ID, Student_ID, Asse_Status, Marks_Obtained, Grade_Obtained)
+VALUES (11, 302, 201, 'Submitted', 92, 'A')
+INTO Assessment_Module_Student (Assessment_ID, Module_ID, Student_ID, Asse_Status, Marks_Obtained, Grade_Obtained)
+VALUES (11, 302, 202, 'Submitted', 84, 'B')
+INTO Assessment_Module_Student (Assessment_ID, Module_ID, Student_ID, Asse_Status, Marks_Obtained, Grade_Obtained)
+VALUES (12, 303, 201, 'Not Submitted', 0, 'E')
+INTO Assessment_Module_Student (Assessment_ID, Module_ID, Student_ID, Asse_Status, Marks_Obtained, Grade_Obtained)
+VALUES (12, 303, 202, 'Not Submitted', 0, 'E')
+INTO Assessment_Module_Student (Assessment_ID, Module_ID, Student_ID, Asse_Status, Marks_Obtained, Grade_Obtained)
+VALUES (13, 304, 201, 'Not Submitted', 0, 'E')
+SELECT * FROM dual;
+
+

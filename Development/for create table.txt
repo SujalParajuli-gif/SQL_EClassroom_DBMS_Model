@@ -1,0 +1,162 @@
+
+create user sujallparajuli identified by 23050262;
+grant connect, resource to sujallparajuli;
+connect sujallparajuli/23050262;
+
+
+SET LINESIZE 300; 
+SET PAGESIZE 500; 
+
+table creation wala
+
+
+
+CREATE TABLE Student (
+    Student_ID INT PRIMARY KEY,
+    Student_Name VARCHAR(40) NOT NULL,
+    DOB DATE NOT NULL,
+    Enrollment_Date DATE NOT NULL,
+    Std_Email VARCHAR(30) UNIQUE NOT NULL,
+    Program_ID INT,
+    FOREIGN KEY (Program_ID) REFERENCES Program(Program_ID)
+);
+
+
+
+CREATE TABLE Program (
+    Program_ID INT PRIMARY KEY,
+    P_Description VARCHAR(100) NOT NULL,
+    P_Duration INT NOT NULL,
+    Program_Name VARCHAR(40) NOT NULL
+);
+
+
+
+
+CREATE TABLE Module (
+    Module_ID INT PRIMARY KEY,
+    Module_Name VARCHAR(40) NOT NULL,
+    M_Duration INT NOT NULL,
+    M_Credits INT NOT NULL,
+    M_Description VARCHAR(100) NOT NULL
+);
+
+
+
+
+
+CREATE TABLE Module_Student (
+    Student_ID INT,
+    Module_ID INT,
+    PRIMARY KEY (Student_ID, Module_ID),
+    FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID),
+    FOREIGN KEY (Module_ID) REFERENCES Module(Module_ID)
+);
+
+
+
+
+
+
+CREATE TABLE Teacher (
+    Teacher_ID INT PRIMARY KEY,
+    Teacher_Name VARCHAR(40) NOT NULL,
+    Teach_Specialization VARCHAR(30) NOT NULL,
+    Teach_Email VARCHAR(30) UNIQUE NOT NULL
+);
+
+
+
+
+
+CREATE TABLE Student_Module_Teacher (
+    Teacher_ID INT,
+    Module_ID INT,
+    Student_ID INT,
+    PRIMARY KEY (Teacher_ID, Module_ID, Student_ID),
+    FOREIGN KEY (Teacher_ID) REFERENCES Teacher(Teacher_ID),
+    FOREIGN KEY (Module_ID) REFERENCES Module(Module_ID),
+    FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID)
+);
+
+
+
+
+CREATE TABLE Announcement (
+    Announcement_ID INT PRIMARY KEY,
+    Ann_Title VARCHAR(20) NOT NULL,
+    Date_Posted DATE NOT NULL,
+    Ann_Content VARCHAR(100) NOT NULL
+);
+
+
+
+
+
+CREATE TABLE Student_Teacher_Announcement (
+    Announcement_ID INT,
+    Module_ID INT,
+    Student_ID INT,
+    Teacher_ID INT,
+    PRIMARY KEY (Announcement_ID, Module_ID, Student_ID, Teacher_ID),
+    FOREIGN KEY (Announcement_ID) REFERENCES Announcement(Announcement_ID),
+    FOREIGN KEY (Module_ID) REFERENCES Module(Module_ID),
+    FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID),
+    FOREIGN KEY (Teacher_ID) REFERENCES Teacher(Teacher_ID)
+);
+
+
+
+
+
+CREATE TABLE Resources (
+    Resource_ID INT PRIMARY KEY,
+    R_Duration INT NOT NULL,
+    R_Title VARCHAR(20) NOT NULL,
+    R_Type VARCHAR(30) NOT NULL
+);
+
+
+
+
+
+
+CREATE TABLE Student_Module_Resource (
+    Resource_ID INT,
+    Module_ID INT,
+    Student_ID INT,
+    PRIMARY KEY (Resource_ID, Module_ID, Student_ID),
+    FOREIGN KEY (Resource_ID) REFERENCES Resources(Resource_ID),
+    FOREIGN KEY (Module_ID) REFERENCES Module(Module_ID),
+    FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID)
+);
+
+
+
+
+
+
+CREATE TABLE Assessment (
+    Assessment_ID NUMBER(10) PRIMARY KEY,
+    Asse_Description VARCHAR2(100) NOT NULL,
+    Asse_Weightage VARCHAR2(50) NOT NULL,
+    Asse_Deadline DATE NOT NULL
+);
+
+
+
+
+CREATE TABLE Assessment_Module_Student (
+    Assessment_ID NUMBER(10) NOT NULL,
+    Module_ID NUMBER(10) NOT NULL,
+    Student_ID NUMBER(10) NOT NULL,
+    Asse_Status VARCHAR2(15) NOT NULL,
+    Marks_Obtained NUMBER(3) NOT NULL,
+    Grade_Obtained VARCHAR2(1) NOT NULL,
+    CONSTRAINT PK_Assessment_Module_Student PRIMARY KEY (Assessment_ID, Module_ID, Student_ID),
+    CONSTRAINT FK_Assessment FOREIGN KEY (Assessment_ID) REFERENCES Assessment(Assessment_ID),
+    CONSTRAINT FK_Module FOREIGN KEY (Module_ID) REFERENCES Module(Module_ID),
+    CONSTRAINT FK_Student FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID)
+);
+
+
